@@ -10,6 +10,7 @@ export default class Kronos {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     };
+    this.v2 = `https://secure2.saashr.com/ta/rest/v2/companies/|${this.credentials.company}`;
   }
 
   /**
@@ -80,7 +81,7 @@ export default class Kronos {
   async getEmployees() {
     const options = {
       method: 'GET',
-      url: `https://secure2.saashr.com/ta/rest/v2/companies/|${this.credentials.company}/employees`,
+      url: `${this.v2url}/employees`,
       ...(await this.handleHeaders())
     };
     return this.handleAxios({ options });

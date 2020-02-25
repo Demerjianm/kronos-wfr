@@ -1,12 +1,25 @@
 {
+  "name": "kronos-wfr-sdk",
+  "version": "1.0.0",
+  "description": "SDK for workforce ready api",
+  "main": "kronos.js",
+  "scripts": {
+    "deploy": "npm publish",
+    "start": "babel-watch index.js"
+  },
+  "author": "Dale Nguyen",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demerjian,/typescript-package-starter.git"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "@babel/core": "^7.8.4",
     "@babel/polyfill": "^7.8.3",
     "@babel/runtime": "^7.8.4",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "intuit-oauth": "^2.0.2"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/node": "^7.8.4",
@@ -28,7 +41,7 @@
     "jest": "^25.1.0",
     "prettier": "^1.19.1"
   },
-  "scripts": {
-    "start": "babel-watch index.js"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@dalenguyen"
   }
 }
