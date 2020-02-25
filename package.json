@@ -7,11 +7,11 @@
     "deploy": "npm publish",
     "start": "babel-watch index.js"
   },
-  "author": "Dale Nguyen",
+  "author": "Michael",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/demerjian,/typescript-package-starter.git"
+    "url": "git+https://https://github.com/Demerjianm/kronos-wfr"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -42,6 +42,6 @@
     "prettier": "^1.19.1"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@dalenguyen"
+    "registry": "https://npm.pkg.github.com/@demerjianm"
   }
 }
