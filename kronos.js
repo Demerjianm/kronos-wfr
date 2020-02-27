@@ -1,7 +1,6 @@
 const axios = require('axios');
-require('dotenv').config();
 
-export default class Kronos {
+class Kronos {
   constructor({ username, password, apikey, company }) {
     this.credentials = { username, password, company };
     this.apikey = apikey;
@@ -88,4 +87,4 @@ export default class Kronos {
   }
 }
 
-module.exports = Kronos;
+module.exports = { Kronos };
