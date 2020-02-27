@@ -1,17 +1,18 @@
 {
-  "name": "kronos-wfr-sdk",
+  "name": "@demerjianm/kronos-wfr",
   "version": "1.0.0",
   "description": "SDK for workforce ready api",
   "main": "kronos.js",
   "scripts": {
     "deploy": "npm publish",
-    "start": "babel-watch index.js"
+    "start": "babel-watch index.js",
+    "build": "tsc"
   },
   "author": "Michael",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/Demerjianm/kronos-wfr"
+    "url": "https://github.com/Demerjianm/kronos-wfr.git"
   },
   "dependencies": {
     "axios": "^0.19.2",

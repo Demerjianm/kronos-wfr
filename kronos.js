@@ -87,3 +87,5 @@ export default class Kronos {
     return this.handleAxios({ options });
   }
 }
+
+module.exports = Kronos;
