@@ -1,6 +1,6 @@
 {
   "name": "@demerjianm/kronos-wfr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK for workforce ready api",
   "main": "kronos.js",
   "scripts": {
