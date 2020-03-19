@@ -80,7 +80,7 @@ class Kronos {
   async getEmployees() {
     const options = {
       method: 'GET',
-      url: `https://secure2.saashr.com/ta/rest/v2/companies/|${this.credentials.company}/employees`,
+      url: `${this.v2}/employees`,
       ...(await this.handleHeaders())
     };
     return this.handleAxios({ options });
