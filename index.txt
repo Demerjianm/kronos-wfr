@@ -1,0 +1,51 @@
+import '@babel/core';
+import '@babel/polyfill';
+
+import axios from 'axios';
+
+/**
+ *
+ *
+ * @class Kronos
+ */
+class Kronos {
+  /**
+   * Creates an instance of Kronos.
+   * @param {object} { username, password, apikey, company }
+   * @memberof Kronos
+   */
+  constructor({ username, password, apikey, company }) {
+    this.credentials = { username, password, company };
+    this.apikey = apikey;
+  }
+
+  /**
+   *
+   *
+   * @returns
+   * @memberof Kronos
+   */
+  async login() {
+    try {
+      const res = await axios.post(
+        'https://secure3.saashr.com/ta/rest/v1/login',
+        JSON.stringify({ credentials: this.credentials }),
+        {
+          headers: {
+            'content-type': 'application/json',
+            'api-key': this.apikey
+          }
+        }
+      );
+
+      console.log('Login: ', res);
+
+      return res.data.results;
+    } catch (error) {
+      console.error(error);
+      return error;
+    }
+  }
+}
+
+module.exports = { Kronos };
