@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  node:
+    image: node:12
+    user: node
+    working_dir: /usr/src/kronos_wfr
+    environment:
+      - NODE_ENV=test
+    command: yarn run test
+    volumes:
+      - .:/usr/src/kronos_wfr
+    ports:
+      - "4200:4200"
